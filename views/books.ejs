@@ -1,17 +1,19 @@
 <% include ./header %>
 
-    <%= books.length%>
- 
-    <% books.forEach(book => { %>
-
-        <p>
-          <%= book.volumeInfo.title%>
-        </p>
-        <img src="<%=book.volumeInfo.imageLinks.thumbnail%>"/>
+  <%= books.length%>
+  <% books.forEach(book => { %>
+  <p>
+    <%= book.volumeInfo.title%>
+  </p>
+  <p>
+    <%= book.volumeInfo.authors%>
+  </p>
+  <p>
+    <%= book.volumeInfo.description%>
+  </p>
+  <img src="<%=book.volumeInfo.imageLinks.thumbnail%>"/>
    
   
-    <% }) %> 
+  <% }) %> 
  
-  
-
 <% include ./footer %>
